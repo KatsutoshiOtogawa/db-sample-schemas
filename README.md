@@ -130,6 +130,13 @@ specify.
 *Reminder*: currently the CO schema will not be installed as part of this 
 process.
 
+*Install CO schema*
+
+```shell
+cd customer_orders
+sqlplus system/systempw@connect_string @co_main copw connect_string users temp 
+```
+
 Using a connect string permits connections to non-container databases and 
 pluggable database using the same syntax.
 
@@ -170,6 +177,7 @@ When prompted, enter the SYSTEM password, a log file name, and connect string.
 If you have installed the CO schema, run the following script to remove it. 
 
 ```shell
+cd customer_orders
 sqlplus system/systempw@connect_string
 @co_drop_user.sql 
 ```
